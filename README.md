@@ -1,3 +1,12 @@
-# ami-copy-cross-accounts
+ami-copy-cross-accounts
+===
 
-This is an AWS lambda to copy AMI from one account to another account across multiple regions.
+# About
+This Lambda will autocopy an AMI from one account to another accross multiple regions.
+
+## Requirements
+To invoke the lambda function, you will need to tag the AMI the following:
+
+```
+copy_approved = true
+```
