@@ -18,7 +18,7 @@ def copy_ami():
     RoleSessionName="AssumeRoleSession1")
   creds = assumeRole["Credentials"]
   
-  images = SOURCE_RESOURCE.images.filter(Filters=[{"Name":"tag:prod_approved", "Values":["true"]}])
+  images = SOURCE_RESOURCE.images.filter(Filters=[{"Name":"tag:copy_approved", "Values":["true"]}])
   for image in images:
     if "copy_timestamp" not in json.dumps(image.tags):
       image.modify_attribute(
